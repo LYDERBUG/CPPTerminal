@@ -1,0 +1,49 @@
+#include<iostream>
+using std::cout;
+using std::cin;
+using std::string;
+using std::endl;
+
+string menu_selection;
+string num_one = "1";
+string num_two = "2";
+
+void menu_two() {
+    if(menu_selection == num_one) {
+        cout << "\nGame coming soon :O";
+    } else if(menu_selection == num_two) {
+        cout << "- Session ended\n";
+        //I'll fix this later lol
+    } else {
+        cout << "\n[Error \'" + menu_selection + "\' Incorrect. Try again]";
+    }
+}
+void menu() {
+    cout << "Menu\n";
+    cout << "[1] : Game\n";
+    cout << "[2] : Exit\n";
+    cout << "Type \'/info-game\' for game details\n";
+    cout << "Enter [1/2] to select: ";
+    getline(cin, menu_selection);
+
+    if(menu_selection.empty()) {
+        cout << "\nInput can't be empty, try again";
+    } else if(menu_selection.length() == 2) {
+        cout << "\n[Error \'" + menu_selection + "\' Incorrect. Try again]";
+    } else if(menu_selection.length() >= 3) {
+        char menu_num1 = menu_selection.at(0);
+        char menu_num2 = menu_selection.at(1);
+        char menu_num3 = menu_selection.at(2);
+        char menu_num4 = menu_selection.at(3);
+        char menu_num5 = menu_selection.at(4);
+        char menu_num6 = menu_selection.at(5);
+        cout << "\n\"" <<menu_num1 << menu_num2 << menu_num3 << menu_num4 << menu_num5 << menu_num6 << "...\"" << " Incorrect, try again";
+    } else {
+        menu_two();
+    }
+}
+
+int main() {
+    menu();
+    return 0;
+}
