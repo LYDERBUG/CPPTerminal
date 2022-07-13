@@ -1,0 +1,4 @@
+Changelog v1.2 (auth part-2) (7/13/2022)
+- '/info-game' now does have working error messages :D
+- Bug fixes and more efficient code writings (its true trust me)
+- Final authentication system fixes before developing the game section
