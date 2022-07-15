@@ -9,6 +9,7 @@ int menu() {
     std::cout << "Menu\n";
     std::cout << "[1] : Game\n";
     std::cout << "[2] : Exit\n";
+    //how many you can re-attempt to enter input
     int index = 3;
 
     for(index; index > 0; index--) {
