@@ -1,4 +1,4 @@
-Changelog : v1.2 (auth part-1) (7/11/2022)
+Changelog : v1.2 (7/11/2022)
 - improved authenticator
 - input error messages are now more readable
 - '/info-game' still unavailable. Neither the game itself lol
