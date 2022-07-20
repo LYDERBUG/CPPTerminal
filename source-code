@@ -1,69 +1,45 @@
-//Version 1.4
+//Version 1.5
 #include<iostream>
+//clears console text: https://stackoverflow.com/questions/6486289/how-can-i-clear-console
+std::string console_clear = "u8\033[2J\033[1;1H";
 
 std::string menu_selection;
 std::string num_one = "1";
 std::string num_two = "2";
-//clears console text: https://stackoverflow.com/questions/6486289/how-can-i-clear-console
-std::string console_clear = "u8\033[2J\033[1;1H";
+int index;
 
+int tic_tac_toe() { //game is here
+    return 0;
+};
+int game_section() {
+    return 0;
+};
+int info_game() {
+    return 0;
+};
 int menu() {
-    std::cout << "Menu\n";
-    std::cout << "[1] : Game\n";
-    std::cout << "[2] : Exit\n";
-    //how many you can re-attempt to enter input
-    int index = 3;
-
-    for(index; index > 0; index--) {
-        std::cout << "Type \'/info-game\' for game details\n";
-        std::cout << "Enter [1/2] to select: ";
-
+    for(index = 69420; index > 0; index++) {
+        std::cout << "CPPTerminal v1.5:\n";
+        std::cout << "[1]: Game\n";
+        std::cout << "[2]: Exit\n";
+        std::cout << "Enter [1/2] to select, \'/info-game\' for game details: ";
         getline(std::cin, menu_selection);
 
         //conditions
         if(menu_selection == num_one) {
             std::cout << console_clear;
-            std::cout << "\nGame coming soon :O";
+            std::cout << "Game coming soon :O";
+            game_section();
             break;
-            //vacant
         } else if(menu_selection == num_two) {
             std::cout << console_clear;
-            std::cout << "\n- Session ended";
             break;
         } else if(menu_selection == "/info-game") {
-            std::cout << "\nNo games currently available. Coming soon";
+            std::cout << "No games currently available. Coming soon";
+            info_game();
             break;
-            //vacant
-
-            //Error messages
-        } else if(menu_selection.empty() && index == 1) {
-            std::cout << "\nInput can't be empty, try again\n";
-            std::cout << "Too many attempts, Press ENTER to reconnect.";
-        } else if(menu_selection.empty()) {
-            std::cout << "\nInput can't be empty, try again" << std::endl;
-
-        } else if((menu_selection.at(0) == '/' || menu_selection.at(0) == 'info' || menu_selection.at(0) == 'game') && index == 1) {
-            std::cout << "\nInput error, \'/info-game\' did you mean?\n";
-            std::cout << "Too many attempts, Press ENTER to reconnect";
-        } else if(menu_selection.at(0) == '/' || menu_selection.at(0) == 'info' || menu_selection.at(0) == 'game') {
-            std::cout << "\nInput error, \'/info-game\' did you mean?" << std::endl;
-
-        } else if(menu_selection.length() >= 11 && index == 1) {
-            std::string error_length = menu_selection.substr(0,8);
-            std::cout << "\n[Error \'" << error_length << "...\'" << " Incorrect. Try again]" << std::endl;
-            std::cout << "Too many attempts, Press ENTER to reconnect";
-        } else if(menu_selection.length() >= 11) {
-            std::string error_length = menu_selection.substr(0,8);
-            std::cout << "\n[Error \'" << error_length << "...\'" << " Incorrect. Try again]" << std::endl;
-
-        } else if(menu_selection.length() <= 10 && index == 1) {
-            std::cout << "\n[Error \'" + menu_selection + "\' Incorrect. Try again]" << std::endl;
-            std::cout << "Too many attempts, Press ENTER to reconnect";
-        } else if(menu_selection.length() <= 10) {
-            std::cout << "\n[Error \'" + menu_selection + "\' Incorrect. Try again]" << std::endl;
-
         } else {
-            std::cout << "E";
+            std::cout << console_clear;
         }
     }
     return 0;
